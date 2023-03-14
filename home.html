@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Trang Chủ</title>
+  <script src="css/jquery-1.11.0.min.js"></script>
+  <script src="css/jquery-migrate-1.2.1.min.js"></script>
+  <script src="css/slick.js"></script>
+  <script src="css/slick.min.js"></script>
+  <script src="js/user.js"></script>
+  <script src="js/arraysanpham.js"></script>
+  <script src="js/showsp.js"></script>
+  <script src="js/donhang.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/trangchu.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <style type="text/css">
+  	a:visited{
+  		color: #35E035;
+  	}
+    a:hover{
+      color: #36C240;
+    }
+  </style>
+</head>
+
+<body onload="checklogin(),display()">
+<div id="menu" style="background-color: #f8f9fa;width:100%;">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light row" style="height: 60px;">
+      <div class="collapse navbar-collapse col-6" id="navbarSupportedContent">
+        <div id="logo" class="col-4">
+          <a class="navbar-brand text-center text-success" href="home.html"><b style="font-size:18px; ">APPLE TEAM</b></a>
+        </div>
+        <form class="form-inline my-2 col-8 my-lg-0">
+          <input class="form-control mr-sm-2 " style="border: 1px solid ;width:253px ;" type="search"
+            placeholder="Search" aria-label="Search">
+          <button style="color: white" class="btn btn-success  my-2" type="submit">Search</button>
+        </form>
+      </div>
+      <ul class="navbar-nav col-6">
+        <li class="nav-item a" style="font-size: 11px;margin-left: 70%;width:120px;background-color: #f8f9fa;">
+          <p class="mt-3 ml-1"><span>Xin chào:</span>
+              <span style="display: none;" id="mess1"></span>
+              <span id="mess2"></span>
+              <br>
+              <b>
+                <span id="mess3"></span>
+              </b>
+          </p>
+        </li>
+      </ul>
+      <a style="width: 40px;color: #35E035" href="giohang.html" class="fas fa-shopping-cart fa-2x">
+      	<b><p id="cartitem" style="position: absolute;left:10% ;font-size:14px ;"></p></b>
+      </a>
+    </nav>
+    
+  </div>
+</div>
+
+
+<div style="margin-top: 30px;z-index: 1" id="carouselExampleIndicators" class="container-fluid col-12 col-xs-12 carousel slide" data-ride="carousel">
+	  <ol class="carousel-indicators">
+	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+	    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+	    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+	  </ol>
+	  <div class="carousel-inner">
+	    <div class="carousel-item active" style="height: 700px">
+	      <img style="height: 900px;opacity: 0.84" src="img/menu1.jpg" class="d-block w-100" alt="...">
+	      <div class="carousel-caption d-none d-md-block">
+          <h5 class="carou d-block w-100" style="font-size: 80px;margin-bottom: 200px;">WE SERVE FRESH VEGETSTABLES & FRUITS</h5>
+          <a class="btn btn-primary" href="">View details</a>
+          </div>
+	    </div>
+	    <div class="carousel-item" style="height: 700px">
+	      <img style="height: 900px;opacity: 0.85" src="img/menu2.jpg" class="d-block w-100" alt="...">
+	      <div class="carousel-caption d-none d-md-block">
+          <h5 class="carou d-block w-100" style="font-size: 80px;margin-bottom: 200px;">WE SERVE FRESH VEGETSTABLES & FRUITS</h5>
+          <a class="btn btn-primary" href="">View details</a>
+          </div>
+	    </div>
+	    <div class="carousel-item" style="height: 700px">
+	      <img style="height: 900px;opacity: 0.93" src="img/menu3.jpg" class="d-block w-100" alt="...">
+	      <div class="carousel-caption d-none d-md-block">
+          <h5 class="carou d-block w-100" style="font-size: 80px;margin-bottom: 200px;">100% FRESH & ORGANIC FOODS</h5>
+          <a class="btn btn-primary" href="">View details</a>
+          </div>
+	    </div>
+	  </div>
+	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+</div>
+
+<section class="container">
+  <div class="content-body">
+    <h4 style="color: #53EA48;font-size: 40px">Sản Phẩm Nổi Bật</h4>
+  </div>
+  <div class="line"></div>
+  <div class="autoplay">
+
+    <div class="slide-card">
+      <div class="img-card">
+        <img src="img/tuoi1.jpg" alt="">
+      </div>
+      <div class="content-card">
+        <p id="contentCard" class="content-card-head text-center pt-2"><strong>Ớt</strong></p>
+      </div>
+      <div class="price text-center" id="price">
+        <span class="price">30.000 VND</span>
+      </div>
+    </div>
+    <div class="slide-card">
+      <div class="img-card">
+        <img src="img/tuoi2.jpg" alt="">
+      </div>
+      <div class="content-card">
+        <p id="contentCard" class="content-card-head text-center pt-2"><strong>Dâu Tây</strong></p>
+      </div>
+      <div class="price text-center" id="price">
+        <span class="price">33.000 VND</span>
+      </div>
+    </div>
+    <div class="slide-card">
+      <div class="img-card">
+        <img src="img/tuoi4.jpg" alt="">
+      </div>
+      <div class="content-card">
+        <p id="contentCard" class="content-card-head text-center pt-2"><strong>Cà Rốt</strong></p>
+      </div>
+      <div class="price text-center" id="price">
+        <span class="price">29.000 VND</span>
+      </div>
+    </div>
+    <div class="slide-card">
+      <div class="img-card">
+        <img src="img/tuoi5.jpg" alt="">
+      </div>
+      <div class="content-card">
+        <p id="contentCard" class="content-card-head text-center pt-2"><strong>Hành</strong></p>
+      </div>
+      <div class="price text-center" id="price">
+        <span class="price">17.999 VND</span>
+      </div>
+    </div>
+    <div class="slide-card">
+      <div class="img-card">
+        <img src="img/tuoi6.jpg" alt="">
+      </div>
+      <div class="content-card">
+        <p id="contentCard" class="content-card-head text-center pt-2"><strong>Táo</strong></p>
+      </div>
+      <div class="price text-center" id="price">
+        <span class="price">70.000 VND</span>
+      </div>
+    </div>
+    <div class="slide-card">
+      <div class="img-card">
+        <img src="img/tuoi7.jpg" alt="">
+      </div>
+      <div class="content-card">
+        <p id="contentCard" class="content-card-head text-center pt-2"><strong>Ớt cay</strong></p>
+      </div>
+      <div class="price text-center" id="price">
+        <span class="price">50.000 VND</span>
+      </div>
+    </div>
+  </div>
+  <div class="line"></div>
+</section>
+<div class="traicaytuoi mt-3 container" id="traicaytuoi">
+  <div class="row">
+    <div class="col-12">
+      <div class="content-body">
+        <h4 style="color: #53EA48">TRÁI CÂY TƯƠI</h4>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="col-12">
+      <div class="row" id="showdtnb">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="traicaykho mt-3 container" id="traicaykho">
+  <div class="row">
+    <div class="col-12">
+      <div class="content-body">
+        <h4 style="color: #53EA48">TRÁI CÂY KHÔ</h4>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="col-12">
+      <div class="row" id="showtbnb">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('.autoplay').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
+  });
+
+</script>
+<div id="modal">
+  <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-8">
+                <h1 class="h3 text-gray-900 mb-4">Welcome Back!</h1>
+            </div>
+            <div class="col-4">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+          <hr>
+          <form class="user col-11 mx-auto">
+            <div class="form-group">
+              <input type="email" id="userlogin" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+            </div>
+            <div class="form-group">
+              <input type="password" id="passwordlogin" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+            </div>
+            <a style="color: white" href="#" onclick="login()" class="btn btn-success btn-user btn-block mb-3 t">
+              Login
+            </a>
+            <p  id="sms" class="text-danger col-12 my-auto" style="font-size: 13px;" ></p>
+          </form>
+          <hr>
+          <div class="text-center">
+            <a class="small text-dark" href="forgot-password.html" >Forgot Password?</a>
+          </div>
+          <div class="text-center">
+            <a class="small text-dark" href="register.html" >Create an Account!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal">
+  <div class="modal fade" id="tthang" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body" >
+          <div class="row">
+            <div class="col-8">
+                <h1 class="h4 text-success">Thông báo !!!</h1>
+            </div>
+            <div class="col-4">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+          <hr class="bg-success">
+          <div class="row">
+              <div class="container-fluid">
+                  <h1 class="h5 text-gray-900"><b id="alert" class="text-success"></b>Đã thêm sản phẩm vào giỏ hàng.</h1>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div style="margin-top: 40px;background:#FAFAFA ;" class="container-fluid">
+    <div style="padding-top: 20px" class="row">
+      <div style="margin-left: 10%" class="col-sm">
+        <p style="font-weight: bold;font-size: 20px;">Vegetables</p>
+        <p></p>
+        <a href=""><i class="fab fa-facebook-f fa-3x"></i></a>
+        <a style="margin-left: 25px" href=""><i class="fab fa-instagram fa-3x"></i></a>
+        <a style="margin-left: 25px" href=""><i class="fab fa-twitter fa-3x"></i></a>
+      </div>
+      <div class="col-sm">
+        <p style="font-weight: bold;font-size: 20px;">Menu</p>
+        <p>Shop</p>
+        <p>About</p>
+        <p>Journal</p>
+        <p>Contact Us</p>
+      </div>
+      <div class="col-sm">
+        <p style="font-weight: bold;font-size: 20px;">Hỗ trợ</p>
+        <a style="" href=""><p>Cách mua hàng</p></a>
+        <a style="" href=""><p>Hình thức thanh toán</p></a>
+        <a style="" href=""><p>Cách thức vận chuyển</p></a>
+      </div>
+      <div class="col-sm">
+        <p style="font-weight: bold;font-size: 20px;">Have a Questions</p>
+        <i style="float: left;" class="fas fa-map-marker-alt"></i>
+        <p >203 Fake St. Mountain</p>
+        <p >View, San Francisco,</p>
+        <p >California, USA</p>
+        <p><i style="margin-right: 10px" class="fas fa-phone"></i>+2 392 3929 210</p>
+        <p><i style="margin-right: 10px" class="fas fa-envelope"></i>teamApple@gmail.com</p>
+
+      </div>
+    </div>
+</div>
+<div class="container-fluid col-12" style="width: 100%;height: 45px;background: #FAFAFA">
+    <p style="margin-left: 42%; font-size: 20px">Copy all right <a href="">Apple Team</a>  2019</p>
+</div>
+<div style="width: 100%; height: 200px;"></div>
+<!-- JS FILES-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

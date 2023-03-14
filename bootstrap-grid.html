@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin - Bootstrap Admin Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="background: white">
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav style="background-color: white" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html">APPLE</a>
+            </div>
+            <!-- Top Menu Items -->
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div style="background: white" class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul style="background: white" class="nav navbar-nav side-nav">
+                    <li>
+                        <a style="background-color: white;color: #9d9d9d" href="forms.html"><i class="fa fa-fw fa-edit"></i> Danh sách sản phẩm</a>
+                    </li>
+                    <li>
+                        <a style="background-color: white;color: #9d9d9d" href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Thêm sản phẩm mới</a>
+                    </li>
+                    <li class="active">
+                        <a style="background-color: white;color: #9d9d9d" href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Danh sách tài khoản</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Danh sách tài khoản
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="fa fa-wrench"></i> Danh sách tài khoản
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div>
+                        <table class="table table-bordered table-hover" style="margin-top: 0px;"
+                        border="2" cellpadding="11" cellspacing="1">               
+                      <thead>
+                      <tr>
+                        <th class="text-center">ID</th>
+                        <th class="text-center">Email</th>
+                        <th class="text-center">Mật khẩu</th>
+                        <th class="text-center">Họ</th>
+                        <th class="text-center">Tên</th>
+                        <th class="text-center">Sửa</th>
+                        <th class="text-center">Xóa</th>
+                      </tr>
+                      </thead>                   
+                          <tbody class="bg-light" id="adminshowtk" >                                    
+                            </tbody>
+                    </table>
+                </div>
+
+        </div>
+        <div id="modal">
+                <div class="modal fade" id="updatetk" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <h3>Cập nhật sản phẩm.</h3>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <button style="font-size:30px;" type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email</label>
+                                        <input type="text" id="email" class="form-control my-3" aria-describedby="emailHelp"
+                                            placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Mật khẩu</label>
+                                        <input type="text" id="password" class="form-control my-3" aria-describedby="Address"
+                                            placeholder="Mật khẩu">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Nhập lại mật khẩu</label>
+                                        <input type="text" id="checkpassword" class="form-control my-3"
+                                            aria-describedby="emailHelp" placeholder="Nhập lại mật khẩu">
+                                    </div>
+                                    <div class="form-group">
+                                            <label for="exampleInputEmail1">First name</label>
+                                            <input type="text" id="firstname" class="form-control my-3"
+                                                aria-describedby="emailHelp" placeholder="First name">
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="exampleInputEmail1">Last name</label>
+                                                <input type="text" id="lastname" class="form-control my-3"
+                                                    aria-describedby="emailHelp">
+                                            </div>
+                                    <div class="form-group">
+                                        <label></label>
+                                    <p class="text-center"><a type="submit" href="#"  onclick="dangkytk()" class="btn btn-danger mt-3"> Đồng ý sửa</a></p>
+                                    </div>
+                                    <p class="text-center text-danger" id="smslogin" style="margin-top:10px;margin-bottom:10px;"></p>
+                                    <p id="show1" style="display: none;"></p>
+                                    <p id="show2" style="display: none;"></p>
+                                    <p id="show3" style="display: none;"></p>
+                                </form>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- /#wrapper -->
+        <div>
+            <span style="display: none;"  id="mess2"></span>
+            <span style="display: none;"  id="mess3"></span>
+        </div>
+        <span id="adminshowsp" style="display: none;"></span>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/arraysanpham.js"></script>
+    <script src="js/usershow.js"></script>
+</body>
+
+</html>

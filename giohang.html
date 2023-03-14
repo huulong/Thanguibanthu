@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+	<title>Giỏ Hàng.</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="menu" style="background-color: #f8f9fa;width:100%">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light row" style="height: 60px;">
+      <div class="collapse navbar-collapse col-6" id="navbarSupportedContent">
+        <div id="logo" class="col-4">
+          <a class="navbar-brand text-center text-success" href="home.html"><b style="font-size:18px;">APPLE TEAM</b></a>
+        </div>
+        <form class="form-inline my-2 col-8 my-lg-0">
+          <input class="form-control mr-sm-2 " style="border: 1px solid ;width:253px ;" type="search"
+            placeholder="Search" aria-label="Search">
+          <button style="color: white" class="btn btn-success  my-2" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    
+  </div>
+</div>
+	<div class="container">
+		<p id="checkshow" style="color: #36C240" class="h4 ml-md-3 mt-2">Giỏ hàng</p>
+		<div class="row">
+			<div class="col-md-12"
+				style="background: #0e0a0a08;border-top: solid 5px #36C240;border-bottom:1px solid #36C240;">
+				<div class="col-md-7 navbar-form " style="float: left;margin-top: 10px;">
+					<p id="xxxx" style="color: #36C240;"></p>
+				</div>
+				<div class="col-md-3 navbar-form navbar-right "
+					style="float: left;margin-left: 150px;margin-top: 10px;margin-bottom: 10px;">
+					<p id="checkshow1"><a href="home.html" class="btn btn-outline-success " style="margin-left: 20px;"
+							id="cancel">Tiếp Tục Xem Sản Phẩm</a></p>
+				</div>
+			</div>
+		</div>
+		<div id="giohang">
+			<table id="tbl" class="table">
+				<thead>
+					<tr>
+						<th scope="col"></th>
+						<th scope="col">Hình ảnh</th>
+						<th scope="col">Tên sản phẩm</th>
+						<th scope="col">Giá</th>
+						<th scope="col">Giá cũ</th>
+						<th scope="col">Số lượng</th>
+						<th scope="col">Số tiền</th>
+					</tr>
+				</thead>
+				<tbody class="bg-light" id="showgh">
+				</tbody>
+			</table>
+			<div class="row">
+				<div class="col-6 ml-auto">
+					<table class="table " style="background-color:#36C240;" cellspacing="2">
+						<tr class="row">
+							<th class="col-6 text-center text-light">Tổng</th>
+							<td id="tongdonhang" class="col-6 text-light"></td>
+						</tr>
+					</table>
+					<button class="btn btn-outline-success form-control mt-2 " id="payment">Mua hàng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="thanhtoan" style="display: none" ; class="container" style="border:1px solid black;">
+		<form name="input">
+			<div class="row bg-light">
+				<div class="col-6 bg-light">
+					<div class="row container-fluid">
+						<p class="text-success col-12"><b>1. Chọn Hình Thức Thanh Toán</b></p>
+						<select class="col-12 form-control" color: "#36C240" id="select">
+							<option value="5">Thanh toán Internet Banking/ATM nội địa (Giảm 5%)</option>
+							<option value="5">Thanh Toán Qua Cổng VTCPay (Giảm 5%)</option>
+							<option value="10">Thanh Toán Qua Ví Momo (Giảm 10%)</option>
+							<option value="0">Thanh Toán Khi Nhận Hàng.</option>
+						</select>
+						<p>Thanh toán online bằng Internet Banking hoặc thẻ ATM nội địa để
+							được giảm giá ngay <b style="color: #36C240">5%</b> , hổ trợ tất cả
+							các ngân hàng, thanh toán an toàn qua cổng VTCPay , và đặc biệt được giảm <b style="color: #36C240;">10%</b> khi thanh toán
+							bằng ví Momo.
+						</p>
+					</div>
+				</div>
+		</form>
+		<div class="col-6 bg-light">
+			<p class="text-success col-12"><b>2.Xem lại đơn hàng.</b></p>
+			<div class="card-body  ml-1 ">
+				<table class="table">
+					<tbody id="showgh_2">
+					</tbody>
+				</table>
+				<hr class="col-11">
+				<input type="button" class="btn col-12 btn-success " onclick="tttt()"
+					value="Thanh Toán">
+			</div>
+
+		</div>
+		</form>
+	</div>
+
+	<div id="theend" style="display: none" class="theend mb-5 row mt-5">
+		<div class="card-body bg-light row ">
+			<h3 class="text-center text-danger col-12"><b>Thanh Toán Đặt Hàng Thành Công</b></h3>
+			<p id="show1" class=" col-12"></p>
+			<p id="showdh" class=" text-danger col-12"></p>
+			<p id="tongtt1" class=" text-danger mx-0 col-12"></p>
+			<p id="show2" class=" col-12 text-danger"></p>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div id="modal">
+		<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-8">
+								<h1 class="h3 text-gray-900 mb-4">Welcome Back!</h1>
+							</div>
+							<div class="col-4">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+						</div>
+						<hr>
+						<form class="user col-11 mx-auto">
+							<div class="form-group">
+								<input type="email" id="userlogin" class="form-control form-control-user"
+									id="exampleInputEmail" aria-describedby="emailHelp"
+									placeholder="Enter Email Address...">
+							</div>
+							<div class="form-group">
+								<input type="password" id="passwordlogin" class="form-control form-control-user"
+									id="exampleInputPassword" placeholder="Password">
+							</div>
+							<a href="#" onclick="login()" class="btn btn-danger btn-user btn-block mb-3 t">
+								Login
+							</a>
+							<p id="sms" class="text-danger col-12 my-auto" style="font-size: 13px;"></p>
+						</form>
+						<hr>
+						<div class="text-center">
+							<a class="small text-danger" href="forgot-password.html">Forgot Password?</a>
+						</div>
+						<div class="text-center">
+							<a class="small text-danger" href="register.html">Create an Account!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/showsp.js"></script>
+<script src="js/user.js"></script>
+<script src="js/giohang.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</html>
